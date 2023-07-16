@@ -9,4 +9,8 @@ jobs:
       - name: Checkout  code
         uses: actions/checkout@v3
       - name: List directory content
-        run: ls -ali
+        run: |
+          ls -ali
+          echo ${{github.actor}}
+          echo ${{github.workspace}}
+          echo ${{github.repository}}
